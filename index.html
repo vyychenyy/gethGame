@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="web3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <title>DiceGame</title>
+    </head>
+    <body>
+        <p><span>游戏规则 ： 游戏中一共有六个骰子，您需要在每一局游戏开始时猜测本局游戏点数大于不等于3的骰子个数，若猜测正确，则获得与赌注等额的奖励，否则扣除赌注。</span></p>
+        <button type="button" id="login" >登陆</button>
+        <button type="button" id="deploy" disabled>合约部署</button>
+        <button type="button" class="button" id="init" disabled>账户初始化</button>
+        <p><span>请选择本局赌注 :
+          <button type="button" class="mbutton" id="m100" disabled>100</button>
+          <button type="button" class="mbutton" id="m500" disabled>500</button>
+          <button type="button" class="mbutton" id="m1000" disabled>1000</button>
+        </p>
+        <button type="button" class="button" id="newGame" disabled>开始游戏</button>
+
+        <p><span>请猜测点数大于三的骰子个数 :
+          <button type="button" class="nbutton" id="n0" disabled>0</button>
+          <button type="button" class="nbutton" id="n1" disabled>1</button>
+          <button type="button" class="nbutton" id="n2" disabled>2</button>
+          <button type="button" class="nbutton" id="n3" disabled>3</button>
+          <button type="button" class="nbutton" id="n4" disabled>4</button>
+          <button type="button" class="nbutton" id="n5" disabled>5</button>
+          <button type="button" class="nbutton" id="n6" disabled>6</button>
+        </p>
+        <button type="button" class="button" id="shack" disabled>摇色子</button>
+
+        <p><span>游戏状态 : </span><span id="msg">Login first.</span></p>
+        <p><span>账户余额 : </span><span id="amount"></span></p>
+        <p><span>本局赌注 : </span><span id="bet"></span></p>
+        <p><span>本局所猜点数大于三的骰子个数 : </span><span id="number"></span></p>
+
+        <img src="test.gif"/>
+        <p><span>本局各骰子点数 : </span><span id="dice"></span></p>
+        <p><span>本局实际点数大于三的骰子个数 : </span><span id="realnumber"></span></p>
+    </body>
+</html>
